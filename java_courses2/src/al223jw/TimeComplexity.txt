@@ -1,0 +1,60 @@
+DFS:
+
+The time complexity of my DFS is : O(N + S).
+
+Motivation: We assign a variable with the result of an method that will be assign 1 time.
+In this method we assigned to the variable we have a while loop which loops for S times.
+In the loop we have a method call of the method we are in and it will be executed N times for each nodes we have.
+
+O(N + S) where N is number of nodes we have and S is the number of successors.
+
+BFS:
+
+The time complexity of my BFS is: O(N + S).
+
+Motivation: In the method we have a while loop which loops for 1 time.
+In this loop we assign a variable with the result of a method.
+In the method we assigned to the variable we have a while loop that will loop for N times.
+In this while loop we have a while loop that will loop for S times.
+
+O(N + S) where N is the number of times we loop and S is the number of successors.
+
+TransitiveClosure:
+
+The time complexity of my computeClosure is: O(N^2 + NS).
+
+Motivation: In the computeClosure method we have a while loop that loops for N times.
+in the loop we have a variable assign to the result of the dfs method.
+We have calculated that my DFS method is O(N + S) this will mean that in computeClosure
+the dfs method call will execute for N times. That will be O(N + S) * N which is simplified
+to O(N^2 + NS).
+
+O(N^2 + NS) N^2 is for the N in dfs method and N in computeClosure method. NS is for the N
+in computeClosure method and the S in dfs method.
+
+
+ConnectedComponents:
+
+The time complexity of my BFS is: O(NE + NS + NC).
+
+Motivation:
+In the computeComponents method we have a while loop that loops for N times.
+In the loop we have a method call to method computeComponentsRecursive.
+In the method we have a while loop that loops for E times.
+We also have a method call that is called S times.
+Then in the computeComponents method we have a foreach loop which loops for C times.
+
+O(NE + NS + NC) N stands for the number of times we loop threw the first while loop in computeComponents.
+E stands for all the edges we loop threw in computeComponentsRecursive while loop.
+S stands for all the successors we have to call the computeComponentsRecursive method for.
+C stands for the amount of collections we have to loop threw.
+
+References:
+All the calculations and motivations is based on the slides from the lectures and also from the slides Johan Hagelbäck gave us.
+
+Lecture slides: http://homepage.lnu.se/staff/jlnmsi/fost/lectures/TimeCompl.pdf
+Johan Hagelbäck slides: https://slack-files.com/files-pri-safe/T0347K4GQ-F2MTW9NTH/timecomplexity-search.pdf?c=1476272262-ff9bf0e58f380be8f880d27390a3f902cc694fbc
+
+
+
+
